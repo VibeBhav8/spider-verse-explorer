@@ -1,0 +1,226 @@
+[
+  {
+    "id": "miles-morales",
+    "name": "Miles Morales",
+    "alias": "Spider-Man",
+    "universe": "Earth-1610",
+    "powers": [
+      "Bio-Electric Venom Blast & Venom Saber",
+      "Arachnid Camouflage (Active Invisibility)",
+      "Spider-Sense Precognition",
+      "Wall-Crawling & Bio-Adhesion",
+      "Superhuman Agility, Speed & Reflexes"
+    ],
+    "bio": "A Brooklyn teenager bitten by a radioactive Alchemax spider, Miles took up the mantle of Spider-Man following the death of his universe's Peter Parker. Synthesizing his distinct bio-electric venom strike and optic camouflage with iconic streetwear style and unshakeable resilience, he proves that anyone can wear the mask—and wear it their own way.",
+    "themeColor": "#E63946",
+    "accentColor": "#00F0FF",
+    "imageUrl": "https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=1200&q=80",
+    "renderUrl": "https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=1200&q=80",
+    "avatarUrl": "https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=400&q=80",
+    "quote": "Everyone keeps telling me how my story is supposed to go. Nah. I'm-a do my own thing.",
+    "firstAppearance": "Ultimate Fallout #4 (2011)",
+    "badge": "Brooklyn's One & Only",
+    "stats": {
+      "strength": 82,
+      "agility": 95,
+      "speed": 90,
+      "intellect": 84
+    }
+  },
+  {
+    "id": "gwen-stacy",
+    "name": "Gwen Stacy",
+    "alias": "Spider-Woman / Ghost-Spider",
+    "universe": "Earth-65",
+    "powers": [
+      "Dimensional Travel via Gizmo Web-Watch",
+      "Acrobatic Ballet Combat & Freestyle Rhythm",
+      "Wall-Crawling & Surface Adhesion",
+      "Precognitive Spider-Sense",
+      "Superhuman Strength & Balance"
+    ],
+    "bio": "In an alternate reality rendered in watercolor pastels, Gwen Stacy was bitten by a genetically engineered spider while her best friend Peter Parker died tragically. Drummer for the indie band The Mary Janes and a pivotal Web-Warrior, she balances poignant emotional burdens with graceful, percussive combat across the multiverse.",
+    "themeColor": "#FF66B2",
+    "accentColor": "#00F5D4",
+    "imageUrl": "https://images.unsplash.com/photo-1604200213928-ba3cf4fc8436?auto=format&fit=crop&w=1200&q=80",
+    "renderUrl": "https://images.unsplash.com/photo-1604200213928-ba3cf4fc8436?auto=format&fit=crop&w=1200&q=80",
+    "avatarUrl": "https://images.unsplash.com/photo-1604200213928-ba3cf4fc8436?auto=format&fit=crop&w=400&q=80",
+    "quote": "In every other universe, Gwen Stacy falls for Spider-Man. And in every other universe, it doesn't end well.",
+    "firstAppearance": "Edge of Spider-Verse #2 (2014)",
+    "badge": "Dimension Drummer",
+    "stats": {
+      "strength": 80,
+      "agility": 98,
+      "speed": 92,
+      "intellect": 86
+    }
+  },
+  {
+    "id": "peter-b-parker",
+    "name": "Peter B. Parker",
+    "alias": "Spider-Man",
+    "universe": "Earth-616",
+    "powers": [
+      "Veteran Spider-Sense Instincts",
+      "Fluid Mechanical Web-Shooters",
+      "Decades of Tactical Combat Experience",
+      "Superhuman Stamina & Durability",
+      "Fatherhood Reflexes (Mayday Harness)"
+    ],
+    "bio": "A seasoned, cynical Spider-Man who endured twenty-two years of cracked ribs, bad investments, and divorce before being pulled into Earth-1610. Mentoring Miles reignited Peter's belief in hope and family, leading him to reconcile with Mary Jane and become a devoted, web-slinging father to Mayday Parker.",
+    "themeColor": "#3A86FF",
+    "accentColor": "#FF0055",
+    "imageUrl": "https://images.unsplash.com/photo-1608889175123-8ee362201f81?auto=format&fit=crop&w=1200&q=80",
+    "renderUrl": "https://images.unsplash.com/photo-1608889175123-8ee362201f81?auto=format&fit=crop&w=1200&q=80",
+    "avatarUrl": "https://images.unsplash.com/photo-1608889175123-8ee362201f81?auto=format&fit=crop&w=400&q=80",
+    "quote": "You won't know when you're ready. That's all it is, Miles. A leap of faith.",
+    "firstAppearance": "Amazing Fantasy #15 (1962)",
+    "badge": "The Veteran Mentor",
+    "stats": {
+      "strength": 86,
+      "agility": 88,
+      "speed": 85,
+      "intellect": 94
+    }
+  },
+  {
+    "id": "miguel-ohara",
+    "name": "Miguel O'Hara",
+    "alias": "Spider-Man 2099",
+    "universe": "Earth-928",
+    "powers": [
+      "Retractable Forearm & Talon Claws",
+      "Paralytic Venomous Fangs",
+      "Accelerated Vision & Digital Decoys",
+      "Laser Web-Cape & Organic Webbing",
+      "High-Tech Multiverse Gizmo Watch System"
+    ],
+    "bio": "An elite geneticist from the dystopian cyberpunk metropolis of Nueva York in 2099. After his DNA was overwritten with 50% arachnid genes during a corporate saboteur incident, Miguel forged the Spider-Society across space-time to police dimensional anomalies and enforce the preservation of canon events at all costs.",
+    "themeColor": "#00E5FF",
+    "accentColor": "#FF003C",
+    "imageUrl": "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=80",
+    "renderUrl": "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=80",
+    "avatarUrl": "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=400&q=80",
+    "quote": "You're an anomaly. You were never supposed to be Spider-Man. I have to protect the multiverse.",
+    "firstAppearance": "The Amazing Spider-Man #365 (1992)",
+    "badge": "Spider-Society Commander",
+    "stats": {
+      "strength": 96,
+      "agility": 91,
+      "speed": 94,
+      "intellect": 96
+    }
+  },
+  {
+    "id": "pavitr-prabhakar",
+    "name": "Pavitr Prabhakar",
+    "alias": "Spider-Man India",
+    "universe": "Earth-50101",
+    "powers": [
+      "Mystical Yoyo Weaponry & Web Threading",
+      "Effortless High-Rise Parkour & Wall-Running",
+      "Hyper-Flexible Agility & Reflexes",
+      "Ancient Mystic Spider-Sense",
+      "Kalaripayattu Martial Arts Discipline"
+    ],
+    "bio": "Patrolling the luminous vertical paradise of Mumbattan, Pavitr received his spider abilities through an ancient yogi's mystical blessing. Bursting with charisma, immaculate hair, and bright optimism, he finds heroics thrillingly easy until a sudden canon disruption challenges everything he holds dear.",
+    "themeColor": "#FF9F1C",
+    "accentColor": "#2EC4B6",
+    "imageUrl": "https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=1200&q=80",
+    "renderUrl": "https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=1200&q=80",
+    "avatarUrl": "https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=400&q=80",
+    "quote": "Being Spider-Man is so easy! Just traffic, chai tea—wait! Did you say chai tea?! Chai MEANS tea!",
+    "firstAppearance": "Spider-Man: India #1 (2004)",
+    "badge": "Mumbattan's Finest",
+    "stats": {
+      "strength": 81,
+      "agility": 96,
+      "speed": 91,
+      "intellect": 85
+    }
+  },
+  {
+    "id": "hobie-brown",
+    "name": "Hobie Brown",
+    "alias": "Spider-Punk",
+    "universe": "Earth-138",
+    "powers": [
+      "15,000-Volt Electric Guitar Sonic Blasts",
+      "Halftone Collage Reality Distortion",
+      "Anti-Establishment Sonic Feedback",
+      "Unpredictable Rhythm-Break Acrobatics",
+      "Improvised Web-Shooter Gadgetry"
+    ],
+    "bio": "An anarcho-punk hero from a totalitarian British police state, Hobie weaponizes blistering punk riffs against fascist regimes. Defying graphic uniformity, his appearance fluctuates frame-by-frame with newspaper print, safety pins, and neon spray paint, standing as an uncompromising icon of rebellion.",
+    "themeColor": "#FF007F",
+    "accentColor": "#00FFCC",
+    "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80",
+    "renderUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80",
+    "avatarUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80",
+    "quote": "I don't believe in consistency. I don't believe in the police. But I believe in you, mate.",
+    "firstAppearance": "The Amazing Spider-Man Vol. 3 #10 (2015)",
+    "badge": "Anarchist Virtuoso",
+    "stats": {
+      "strength": 85,
+      "agility": 94,
+      "speed": 89,
+      "intellect": 90
+    }
+  },
+  {
+    "id": "peni-parker",
+    "name": "Peni Parker",
+    "alias": "SP//dr",
+    "universe": "Earth-14512",
+    "powers": [
+      "Psychic Symbiosis with Radioactive Mech-Spider",
+      "SP//dr Titanium Exoskeleton Piloting",
+      "Plasma Cannon Artillery & Electro-Webs",
+      "Cybernetic Neural Interface & Tactical HUD",
+      "Rocket Thruster High-Velocity Mobility"
+    ],
+    "bio": "In an anime-inspired futuristic Neo-Tokyo, high school prodigy Peni Parker shares a telepathic link with a radioactive arachnid that co-pilots the SP//dr biomechanical mech suit created by her father. Combining joyful manga enthusiasm with fierce cybernetic heavy firepower, she dominates technological warfare.",
+    "themeColor": "#FF2A6D",
+    "accentColor": "#05D9E8",
+    "imageUrl": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+    "renderUrl": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+    "avatarUrl": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80",
+    "quote": "Konichiwa! Me and SP//dr make quite the team. You mess with one of us, you mess with both of us!",
+    "firstAppearance": "Edge of Spider-Verse #5 (2014)",
+    "badge": "Cybernetic Mech Pilot",
+    "stats": {
+      "strength": 95,
+      "agility": 86,
+      "speed": 88,
+      "intellect": 97
+    }
+  },
+  {
+    "id": "spider-man-noir",
+    "name": "Peter Parker (Noir)",
+    "alias": "Spider-Man Noir",
+    "universe": "Earth-90214",
+    "powers": [
+      "Monochrome Shadow Invisibility & Stealth",
+      "Supernatural Mystic Spider-God Blessing",
+      "Master Marksmanship & Trench Combat",
+      "Wall-Crawling & Silent Takedowns",
+      "Psychological Intimidation & Interrogation"
+    ],
+    "bio": "Hailing from a 1933 Great Depression New York steeped in corruption and organized crime, this hardboiled vigilante was granted supernatural spider powers by an ancient artifact. Dressed in a trench coat, fedora, and aviator goggles, he stalks mobsters in the shadows while forever pondering the enigma of color.",
+    "themeColor": "#9E9E9E",
+    "accentColor": "#F5F5F5",
+    "imageUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80",
+    "renderUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80",
+    "avatarUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=400&q=80",
+    "quote": "Wherever I go, the wind follows. And the wind, it smells like rain... and burning matchsticks.",
+    "firstAppearance": "Spider-Man Noir #1 (2009)",
+    "badge": "Hardboiled Detective",
+    "stats": {
+      "strength": 84,
+      "agility": 87,
+      "speed": 84,
+      "intellect": 91
+    }
+  }
+]

@@ -3,25 +3,44 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #06070c;
+  --foreground: #f0f4f8;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  selection-background-color: #ff0055;
+  selection-color: #ffffff;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+::selection {
+  background-color: #ff0055;
+  color: #ffffff;
+}
+
+/* Comic Halftone Pattern */
+.halftone-bg {
+  background-image: radial-gradient(rgba(0, 240, 255, 0.12) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.halftone-magenta {
+  background-image: radial-gradient(rgba(255, 0, 85, 0.12) 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
+}
+
+/* Subtle Comic Border Effect */
+.comic-border {
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 4px 4px 0px rgba(0, 240, 255, 0.35);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.comic-border:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px rgba(255, 0, 85, 0.6);
+  border-color: rgba(0, 240, 255, 0.8);
 }

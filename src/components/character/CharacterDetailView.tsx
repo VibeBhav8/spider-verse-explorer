@@ -336,7 +336,13 @@ export default function CharacterDetailView({
         </div>
 
         {/* UNIVERSE NAVIGATION SWITCHER */}
-        <section className="mt-16 border-t border-black/10 pt-10 dark:border-white/10">
+        <motion.section
+          initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.15 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="mt-16 border-t border-black/10 pt-10 dark:border-white/10"
+        >
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-widest text-[#ff0055] dark:text-[#00f0ff]">
               <Compass className="h-4 w-4 text-amber-500 dark:text-[#ffe600]" />
@@ -388,7 +394,7 @@ export default function CharacterDetailView({
               );
             })}
           </div>
-        </section>
+        </motion.section>
       </div>
     </div>
   );

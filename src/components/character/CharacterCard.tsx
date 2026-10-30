@@ -22,11 +22,13 @@ export default function CharacterCard({
   return (
     <motion.div
       layout={!shouldReduceMotion}
-      initial={{ opacity: 0, scale: shouldReduceMotion ? 1 : 0.92 }}
-      animate={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 25, scale: shouldReduceMotion ? 1 : 0.95 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: false, amount: 0.15 }}
       exit={{ opacity: 0, scale: shouldReduceMotion ? 1 : 0.92 }}
       transition={{
-        duration: 0.35,
+        duration: 0.4,
+        ease: "easeOut",
         layout: { duration: shouldReduceMotion ? 0 : 0.35, ease: "easeOut" },
       }}
       whileHover={

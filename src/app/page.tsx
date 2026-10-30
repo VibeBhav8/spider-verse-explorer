@@ -91,7 +91,8 @@ export default function Home() {
         <motion.div
           variants={containerVariants}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.15 }}
           className="relative z-10 max-w-5xl mx-auto text-center"
         >
           {/* Issue Header Tag */}
@@ -189,7 +190,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.6 }}
             className="flex flex-col md:flex-row md:items-end justify-between mb-12"
           >
@@ -218,7 +219,7 @@ export default function Home() {
                 key={char.id}
                 initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Link
@@ -286,7 +287,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto mb-16"
           >
@@ -333,7 +334,7 @@ export default function Home() {
                   key={index}
                   initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
+                  viewport={{ once: false, amount: 0.15 }}
                   transition={{ duration: 0.5, delay: index * 0.15 }}
                   className="relative p-6 border-2 border-slate-900/15 dark:border-white/10 bg-white/95 dark:bg-[#090b14]/90 halftone-bg comic-border"
                 >
@@ -368,7 +369,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, scale: shouldReduceMotion ? 1 : 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, amount: 0.4 }}
+            viewport={{ once: false, amount: 0.25 }}
             transition={{ duration: 0.6 }}
             className="relative p-8 sm:p-12 border-2 border-slate-900 dark:border-[#00f0ff] bg-white/95 dark:bg-black/70 shadow-[6px_6px_0px_#ff0055]"
           >

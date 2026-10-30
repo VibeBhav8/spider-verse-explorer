@@ -25,8 +25,8 @@ const DimensionWatch3D = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="relative h-72 w-full flex flex-col items-center justify-center border-2 border-white/20 bg-[#06070e] halftone-bg animate-pulse text-center p-4 font-mono text-xs text-slate-400">
-        <Compass className="h-8 w-8 text-[#00f0ff] animate-spin mb-2" />
+      <div className="relative h-72 w-full flex flex-col items-center justify-center border-2 border-slate-200 bg-slate-100 halftone-bg animate-pulse text-center p-4 font-mono text-xs text-slate-500 dark:border-white/20 dark:bg-[#06070e] dark:text-slate-400">
+        <Compass className="h-8 w-8 text-[#ff0055] animate-spin mb-2 dark:text-[#00f0ff]" />
         <span>INITIALIZING 3D MULTIVERSE WATCH...</span>
       </div>
     ),
@@ -74,10 +74,10 @@ export default function CharacterDetailView({
 
       <div className="mx-auto max-w-7xl">
         {/* Top Breadcrumb & Universe Hopper Bar */}
-        <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between border-b border-white/10 pb-4">
+        <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between border-b border-black/10 pb-4 dark:border-white/10">
           <Link
             href="/characters"
-            className="group inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wider text-slate-300 hover:text-[#00f0ff] transition-colors"
+            className="group inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wider text-slate-700 hover:text-[#ff0055] transition-colors dark:text-slate-300 dark:hover:text-[#00f0ff]"
           >
             <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
             <span>&larr; Back to Multiverse Roster</span>
@@ -87,14 +87,14 @@ export default function CharacterDetailView({
           <div className="flex items-center gap-2">
             <Link
               href={`/characters/${prevChar.id}`}
-              className="inline-flex items-center gap-1 border border-white/20 bg-black/60 px-3 py-1 font-mono text-xs font-bold text-slate-300 hover:border-[#00f0ff] hover:text-[#00f0ff] transition-colors"
+              className="inline-flex items-center gap-1 border border-slate-300 bg-white px-3 py-1 font-mono text-xs font-bold text-slate-700 hover:border-[#ff0055] hover:text-[#ff0055] transition-colors dark:border-white/20 dark:bg-black/60 dark:text-slate-300 dark:hover:border-[#00f0ff] dark:hover:text-[#00f0ff]"
             >
               <ChevronLeft className="h-3.5 w-3.5" />
               <span className="hidden sm:inline">{prevChar.name}</span>
             </Link>
             <Link
               href={`/characters/${nextChar.id}`}
-              className="inline-flex items-center gap-1 border border-white/20 bg-black/60 px-3 py-1 font-mono text-xs font-bold text-slate-300 hover:border-[#ff0055] hover:text-[#ff0055] transition-colors"
+              className="inline-flex items-center gap-1 border border-slate-300 bg-white px-3 py-1 font-mono text-xs font-bold text-slate-700 hover:border-[#ff0055] hover:text-[#ff0055] transition-colors dark:border-white/20 dark:bg-black/60 dark:text-slate-300 dark:hover:border-[#ff0055] dark:hover:text-[#ff0055]"
             >
               <span className="hidden sm:inline">{nextChar.name}</span>
               <ChevronRight className="h-3.5 w-3.5" />
@@ -112,9 +112,9 @@ export default function CharacterDetailView({
             className="lg:col-span-5 flex flex-col gap-4"
           >
             {/* Character Poster Box */}
-            <div className="relative overflow-hidden border-2 border-white/20 bg-[#090b14] shadow-[8px_8px_0px_#000] p-2">
+            <div className="relative overflow-hidden border-2 border-slate-900/15 bg-white shadow-[6px_6px_0px_#00b4d8] p-2 dark:border-white/20 dark:bg-[#090b14] dark:shadow-[8px_8px_0px_#000]">
               {/* Halftone Accent Border */}
-              <div className="relative h-[30rem] w-full overflow-hidden bg-[#0e101a] border border-white/10">
+              <div className="relative h-[30rem] w-full overflow-hidden bg-slate-100 border border-slate-200 dark:border-white/10 dark:bg-[#0e101a]">
                 <div className="absolute inset-0 halftone-bg opacity-25 z-10 pointer-events-none" />
 
                 {/* Character Image */}
@@ -133,7 +133,7 @@ export default function CharacterDetailView({
                 />
 
                 {/* Comic Vignette */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#090b14] via-transparent to-transparent z-10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-[#090b14] via-transparent to-transparent z-10" />
 
                 {/* Dynamic Theme Glow Aura */}
                 <div
@@ -143,12 +143,12 @@ export default function CharacterDetailView({
 
                 {/* Universe Stamp */}
                 <div className="absolute top-4 left-4 z-20 flex flex-col gap-1.5">
-                  <div className="inline-flex items-center gap-1.5 border border-black bg-[#00f0ff] px-2.5 py-1 font-mono text-xs font-black uppercase text-black shadow-[2px_2px_0px_#ff0055]">
+                  <div className="inline-flex items-center gap-1.5 border border-black bg-[#ffe600] px-2.5 py-1 font-mono text-xs font-black uppercase text-black shadow-[2px_2px_0px_#ff0055]">
                     <Shield className="h-3.5 w-3.5" />
                     <span>{character.universe}</span>
                   </div>
                   {character.badge && (
-                    <div className="inline-block border border-black bg-[#ffe600] px-2 py-0.5 font-mono text-[10px] font-black uppercase text-black shadow-[2px_2px_0px_#000]">
+                    <div className="inline-block border border-black bg-[#00f0ff] px-2 py-0.5 font-mono text-[10px] font-black uppercase text-black shadow-[2px_2px_0px_#000]">
                       {character.badge}
                     </div>
                   )}
@@ -156,7 +156,7 @@ export default function CharacterDetailView({
 
                 {/* First Appearance Badge */}
                 <div className="absolute bottom-4 left-4 z-20">
-                  <div className="inline-flex items-center gap-1 bg-black/80 backdrop-blur-sm border border-white/20 px-2.5 py-1 font-mono text-[11px] text-slate-300">
+                  <div className="inline-flex items-center gap-1 bg-black/80 backdrop-blur-sm border border-white/20 px-2.5 py-1 font-mono text-[11px] text-white">
                     <Sparkles className="h-3 w-3 text-[#ffe600]" />
                     <span>Debut: {character.firstAppearance}</span>
                   </div>
@@ -165,13 +165,13 @@ export default function CharacterDetailView({
             </div>
 
             {/* 3D Multiverse Dimension Watch */}
-            <div className="border-2 border-white/10 bg-[#090b14]/90 p-3 comic-border">
+            <div className="border-2 border-slate-900/15 bg-white/95 p-3 comic-border dark:border-white/10 dark:bg-[#090b14]/90">
               <div className="flex items-center justify-between mb-2 font-mono text-xs">
-                <span className="font-bold text-[#ffe600] flex items-center gap-1.5">
-                  <Compass className="h-3.5 w-3.5 text-[#00f0ff]" />
+                <span className="font-bold text-amber-700 dark:text-[#ffe600] flex items-center gap-1.5">
+                  <Compass className="h-3.5 w-3.5 text-[#ff0055] dark:text-[#00f0ff]" />
                   <span>DIMENSION WATCH ARTIFACT</span>
                 </span>
-                <span className="text-[10px] text-slate-400">R3F 3D CAD</span>
+                <span className="text-[10px] text-slate-500 dark:text-slate-400">R3F 3D CAD</span>
               </div>
               <DimensionWatch3D
                 themeColor={character.themeColor}
@@ -181,18 +181,18 @@ export default function CharacterDetailView({
             </div>
 
             {/* Dimensional Biometrics Summary */}
-            <div className="border border-white/10 bg-[#090b14]/80 p-4 font-mono text-xs">
-              <div className="flex items-center justify-between text-slate-400 mb-2">
+            <div className="border border-black/10 bg-white/90 p-4 font-mono text-xs dark:border-white/10 dark:bg-[#090b14]/80">
+              <div className="flex items-center justify-between text-slate-600 dark:text-slate-400 mb-2">
                 <span>CANON STABILITY</span>
-                <span className="font-bold text-[#00f0ff]">SECURED (99.8%)</span>
+                <span className="font-bold text-emerald-600 dark:text-[#00f0ff]">SECURED (99.8%)</span>
               </div>
-              <div className="flex items-center justify-between text-slate-400 mb-2">
+              <div className="flex items-center justify-between text-slate-600 dark:text-slate-400 mb-2">
                 <span>MULTIVERSE THREAT INDEX</span>
-                <span className="font-bold text-[#ffe600]">
+                <span className="font-bold text-amber-600 dark:text-[#ffe600]">
                   CLASS {powerIndex > 90 ? "S (ALPHA)" : "A (ENHANCED)"}
                 </span>
               </div>
-              <div className="flex items-center justify-between text-slate-400">
+              <div className="flex items-center justify-between text-slate-600 dark:text-slate-400">
                 <span>DIMENSIONAL ANCHOR</span>
                 <span className="font-bold text-[#ff0055]">{character.id}</span>
               </div>
@@ -208,10 +208,10 @@ export default function CharacterDetailView({
           >
             {/* Character Header Title */}
             <div>
-              <div className="font-mono text-sm font-black uppercase tracking-widest text-[#ffe600]">
+              <div className="font-mono text-sm font-black uppercase tracking-widest text-[#ff0055] dark:text-[#ffe600]">
                 {character.alias}
               </div>
-              <h1 className="text-4xl sm:text-6xl font-black uppercase tracking-tight text-white mt-1">
+              <h1 className="text-4xl sm:text-6xl font-black uppercase tracking-tight text-slate-900 dark:text-white mt-1">
                 {character.name}
               </h1>
             </div>
@@ -228,26 +228,26 @@ export default function CharacterDetailView({
             </div>
 
             {/* Bio Dossier */}
-            <div className="border-2 border-white/10 bg-[#090b14]/90 p-6 halftone-bg comic-border">
-              <div className="flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-widest text-[#00f0ff] mb-3">
+            <div className="border-2 border-slate-900/15 bg-white/95 p-6 halftone-bg comic-border dark:border-white/10 dark:bg-[#090b14]/90">
+              <div className="flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-widest text-[#ff0055] dark:text-[#00f0ff] mb-3">
                 <Activity className="h-4 w-4" />
                 <span>SPIDER-SOCIETY DOSSIER</span>
               </div>
-              <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
+              <p className="text-sm sm:text-base text-slate-700 dark:text-slate-200 leading-relaxed">
                 {character.bio}
               </p>
             </div>
 
             {/* Detailed Biometric Stats */}
-            <div className="border-2 border-white/10 bg-[#090b14]/90 p-6 comic-border">
-              <div className="flex items-center justify-between mb-4 border-b border-white/10 pb-3">
+            <div className="border-2 border-slate-900/15 bg-white/95 p-6 comic-border dark:border-white/10 dark:bg-[#090b14]/90">
+              <div className="flex items-center justify-between mb-4 border-b border-black/10 dark:border-white/10 pb-3">
                 <div className="flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-widest text-[#ff0055]">
                   <Zap className="h-4 w-4" />
                   <span>BIOMETRIC PERFORMANCE RATINGS</span>
                 </div>
-                <div className="font-mono text-xs text-slate-400">
+                <div className="font-mono text-xs text-slate-500 dark:text-slate-400">
                   OVERALL INDEX:{" "}
-                  <span className="font-bold text-[#00f0ff]">{powerIndex}/100</span>
+                  <span className="font-bold text-[#ff0055] dark:text-[#00f0ff]">{powerIndex}/100</span>
                 </div>
               </div>
 
@@ -256,7 +256,7 @@ export default function CharacterDetailView({
                   {
                     label: "Agility & Reflexes",
                     val: character.stats.agility,
-                    color: "#00f0ff",
+                    color: "#00b4d8",
                   },
                   {
                     label: "Physical Strength",
@@ -266,20 +266,20 @@ export default function CharacterDetailView({
                   {
                     label: "Locomotion Speed",
                     val: character.stats.speed,
-                    color: "#ffe600",
+                    color: "#f59e0b",
                   },
                   {
                     label: "Tactical Intellect",
                     val: character.stats.intellect,
-                    color: "#00f5d4",
+                    color: "#10b981",
                   },
                 ].map((stat, idx) => (
                   <div key={idx} className="space-y-1.5 font-mono text-xs">
-                    <div className="flex justify-between text-slate-300">
+                    <div className="flex justify-between text-slate-600 dark:text-slate-300">
                       <span>{stat.label}</span>
-                      <span className="font-bold text-white">{stat.val}%</span>
+                      <span className="font-bold text-slate-900 dark:text-white">{stat.val}%</span>
                     </div>
-                    <div className="h-2 w-full bg-white/10 overflow-hidden">
+                    <div className="h-2 w-full bg-slate-200 overflow-hidden dark:bg-white/10">
                       <motion.div
                         initial={{ width: 0 }}
                         animate={{ width: `${stat.val}%` }}
@@ -298,8 +298,8 @@ export default function CharacterDetailView({
             </div>
 
             {/* Animated Powers Manifest */}
-            <div className="border-2 border-white/10 bg-[#090b14]/90 p-6 comic-border">
-              <div className="flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-widest text-[#ffe600] mb-3">
+            <div className="border-2 border-slate-900/15 bg-white/95 p-6 comic-border dark:border-white/10 dark:bg-[#090b14]/90">
+              <div className="flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-widest text-amber-600 dark:text-[#ffe600] mb-3">
                 <Sparkles className="h-4 w-4" />
                 <span>ARACHNID POWERS MANIFEST</span>
               </div>
@@ -315,13 +315,15 @@ export default function CharacterDetailView({
                       onMouseLeave={() => setActivePower(null)}
                       className={`inline-flex items-center gap-1.5 border-2 px-3 py-1.5 font-mono text-xs font-bold transition-all ${
                         isHovered
-                          ? "border-[#00f0ff] bg-[#00f0ff] text-black shadow-[3px_3px_0px_#ff0055]"
-                          : "border-white/20 bg-black/50 text-slate-200 hover:border-white/40"
+                          ? "border-[#ff0055] bg-[#ff0055] text-white shadow-[3px_3px_0px_#00b4d8] dark:border-[#00f0ff] dark:bg-[#00f0ff] dark:text-black dark:shadow-[3px_3px_0px_#ff0055]"
+                          : "border-slate-300 bg-slate-50 text-slate-800 hover:border-slate-400 dark:border-white/20 dark:bg-black/50 dark:text-slate-200 dark:hover:border-white/40"
                       }`}
                     >
                       <Zap
                         className={`h-3.5 w-3.5 ${
-                          isHovered ? "text-black" : "text-[#00f0ff]"
+                          isHovered
+                            ? "text-white dark:text-black"
+                            : "text-[#ff0055] dark:text-[#00f0ff]"
                         }`}
                       />
                       <span>{power}</span>
@@ -334,13 +336,13 @@ export default function CharacterDetailView({
         </div>
 
         {/* UNIVERSE NAVIGATION SWITCHER */}
-        <section className="mt-16 border-t border-white/10 pt-10">
+        <section className="mt-16 border-t border-black/10 pt-10 dark:border-white/10">
           <div className="flex items-center justify-between mb-6">
-            <div className="flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-widest text-[#00f0ff]">
-              <Compass className="h-4 w-4 text-[#ffe600]" />
+            <div className="flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-widest text-[#ff0055] dark:text-[#00f0ff]">
+              <Compass className="h-4 w-4 text-amber-500 dark:text-[#ffe600]" />
               <span>DIMENSION HOPPER // SELECT TIMELINE</span>
             </div>
-            <span className="font-mono text-xs text-slate-400">
+            <span className="font-mono text-xs text-slate-500 dark:text-slate-400">
               {allCharacters.length} Connected Dimensions
             </span>
           </div>
@@ -354,14 +356,14 @@ export default function CharacterDetailView({
                   href={`/characters/${char.id}`}
                   className={`group relative flex flex-col items-center border-2 p-2.5 transition-all ${
                     isActive
-                      ? "border-[#00f0ff] bg-[#00f0ff]/10 shadow-[3px_3px_0px_#ff0055]"
-                      : "border-white/10 bg-black/40 hover:border-white/30 hover:bg-white/5"
+                      ? "border-[#ff0055] bg-[#ff0055]/10 shadow-[3px_3px_0px_#00b4d8] dark:border-[#00f0ff] dark:bg-[#00f0ff]/10 dark:shadow-[3px_3px_0px_#ff0055]"
+                      : "border-slate-300 bg-white hover:border-slate-400 hover:bg-slate-50 dark:border-white/10 dark:bg-black/40 dark:hover:border-white/30 dark:hover:bg-white/5"
                   }`}
                 >
                   {/* Universe Tag */}
                   <span
                     className={`font-mono text-[10px] font-black uppercase ${
-                      isActive ? "text-[#00f0ff]" : "text-slate-400"
+                      isActive ? "text-[#ff0055] dark:text-[#00f0ff]" : "text-slate-500 dark:text-slate-400"
                     }`}
                   >
                     {char.universe.replace("Earth-", "E-")}
@@ -371,8 +373,8 @@ export default function CharacterDetailView({
                   <span
                     className={`mt-1 text-center font-mono text-xs font-bold truncate max-w-full ${
                       isActive
-                        ? "text-white"
-                        : "text-slate-300 group-hover:text-white"
+                        ? "text-slate-900 dark:text-white"
+                        : "text-slate-600 group-hover:text-black dark:text-slate-300 dark:group-hover:text-white"
                     }`}
                   >
                     {char.name.split(" ")[0]}

@@ -106,12 +106,12 @@ export default function Home() {
           {/* Bold Comic Headline */}
           <motion.h1
             variants={itemVariants}
-            className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-tight text-white leading-[0.95]"
+            className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-tight text-slate-900 dark:text-white leading-[0.95]"
           >
             <span className="block drop-shadow-[4px_4px_0px_#ff0055]">
               SPIDER
             </span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#00f0ff] via-white to-[#ff0055] drop-shadow-[5px_5px_0px_rgba(0,240,255,0.7)]">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#00f0ff] via-purple-600 dark:via-white to-[#ff0055] drop-shadow-[4px_4px_0px_rgba(0,240,255,0.7)]">
               VERSE
             </span>
             <span className="block text-3xl sm:text-5xl md:text-6xl tracking-widest text-[#ffe600] mt-2 font-mono font-extrabold drop-shadow-[3px_3px_0px_#000]">
@@ -122,7 +122,7 @@ export default function Home() {
           {/* Subtitle with Comic Halftone Backing */}
           <motion.p
             variants={itemVariants}
-            className="mt-8 max-w-2xl mx-auto text-base sm:text-xl text-slate-300 font-sans leading-relaxed"
+            className="mt-8 max-w-2xl mx-auto text-base sm:text-xl text-slate-700 dark:text-slate-300 font-sans leading-relaxed"
           >
             Leap across dimensions. Traverse the interconnected web of destiny, inspect biometric profiles of 8 Spider-People, and safeguard canon events before reality unravels.
           </motion.p>
@@ -145,9 +145,9 @@ export default function Home() {
             {/* Secondary CTA */}
             <a
               href="#features"
-              className="group inline-flex items-center justify-center gap-2 border-2 border-white/30 bg-black/50 backdrop-blur-sm px-6 py-4 font-mono text-sm font-bold uppercase tracking-wider text-slate-200 hover:border-[#00f0ff] hover:text-[#00f0ff] transition-colors"
+              className="group inline-flex items-center justify-center gap-2 border-2 border-slate-900/30 dark:border-white/30 bg-white/80 dark:bg-black/50 backdrop-blur-sm px-6 py-4 font-mono text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-slate-200 hover:border-[#ff0055] dark:hover:border-[#00f0ff] hover:text-[#ff0055] dark:hover:text-[#00f0ff] transition-colors"
             >
-              <Zap className="h-4 w-4 text-[#00f0ff]" />
+              <Zap className="h-4 w-4 text-[#ff0055] dark:text-[#00f0ff]" />
               <span>Explore Features</span>
             </a>
           </motion.div>
@@ -158,22 +158,22 @@ export default function Home() {
             className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto"
           >
             {[
-              { label: "Tracked Realities", val: "8 Universes", color: "#00f0ff" },
-              { label: "Canon Status", val: "99.8% Stable", color: "#ffe600" },
+              { label: "Tracked Realities", val: "8 Universes", color: "#00b4d8" },
+              { label: "Canon Status", val: "99.8% Stable", color: "#e67e22" },
               { label: "Spider-Society", val: "HQ Nueva York", color: "#ff0055" },
-              { label: "Anomalies", val: "Contained", color: "#00f5d4" },
+              { label: "Anomalies", val: "Contained", color: "#10b981" },
             ].map((stat, idx) => (
               <div
                 key={idx}
-                className="border border-white/10 bg-[#0c0d14]/80 p-3 rounded-none comic-border text-center"
+                className="border border-black/10 dark:border-white/10 bg-white/90 dark:bg-[#0c0d14]/80 p-3 rounded-none comic-border text-center shadow-sm"
               >
                 <div
-                  className="font-mono text-xs uppercase tracking-wider"
+                  className="font-mono text-xs uppercase tracking-wider font-bold"
                   style={{ color: stat.color }}
                 >
                   {stat.label}
                 </div>
-                <div className="font-mono text-sm sm:text-base font-black text-white mt-1">
+                <div className="font-mono text-sm sm:text-base font-black text-slate-900 dark:text-white mt-1">
                   {stat.val}
                 </div>
               </div>
@@ -183,7 +183,7 @@ export default function Home() {
       </section>
 
       {/* FEATURED SPIDER-PEOPLE PREVIEW (Scroll Triggered) */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-white/10 bg-black/40">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-black/10 dark:border-white/10 bg-slate-200/40 dark:bg-black/40">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <motion.div
@@ -194,17 +194,17 @@ export default function Home() {
             className="flex flex-col md:flex-row md:items-end justify-between mb-12"
           >
             <div>
-              <div className="inline-flex items-center gap-1.5 font-mono text-xs font-bold uppercase tracking-widest text-[#00f0ff]">
+              <div className="inline-flex items-center gap-1.5 font-mono text-xs font-bold uppercase tracking-widest text-[#ff0055] dark:text-[#00f0ff]">
                 <Globe className="h-3.5 w-3.5" />
                 <span>MULTIVERSE ROSTER PREVIEW</span>
               </div>
-              <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white mt-2">
+              <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-slate-900 dark:text-white mt-2">
                 MEET THE <span className="text-[#ff0055]">WEB-WARRIORS</span>
               </h2>
             </div>
             <Link
               href="/characters"
-              className="mt-4 md:mt-0 inline-flex items-center gap-2 font-mono text-sm font-bold text-[#00f0ff] hover:text-[#ff0055] transition-colors"
+              className="mt-4 md:mt-0 inline-flex items-center gap-2 font-mono text-sm font-bold text-[#ff0055] dark:text-[#00f0ff] hover:text-black dark:hover:text-[#ff0055] transition-colors"
             >
               <span>View all 8 Spider-People</span>
               <ArrowRight className="h-4 w-4" />
@@ -223,54 +223,54 @@ export default function Home() {
               >
                 <Link
                   href={`/characters/${char.id}`}
-                  className="group relative block overflow-hidden border-2 border-white/15 bg-[#090b12] transition-all hover:border-[#00f0ff] hover:shadow-[5px_5px_0px_#ff0055]"
+                  className="group relative block overflow-hidden border-2 border-slate-900/15 dark:border-white/15 bg-white dark:bg-[#090b12] shadow-sm transition-all hover:border-[#ff0055] dark:hover:border-[#00f0ff] hover:shadow-[5px_5px_0px_#00f0ff] dark:hover:shadow-[5px_5px_0px_#ff0055]"
                 >
-                {/* Image Container with Halftone Accent */}
-                <div className="relative h-64 w-full overflow-hidden bg-[#0e101a]">
-                  <Image
-                    src={char.imageUrl}
-                    alt={char.name}
-                    fill
-                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#090b12] via-transparent to-transparent" />
+                  {/* Image Container with Halftone Accent */}
+                  <div className="relative h-64 w-full overflow-hidden bg-slate-100 dark:bg-[#0e101a]">
+                    <Image
+                      src={char.imageUrl}
+                      alt={char.name}
+                      fill
+                      className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-[#090b12] via-transparent to-transparent" />
 
-                  {/* Universe Badge */}
-                  <div className="absolute top-3 left-3 bg-black/80 border border-white/20 px-2 py-0.5 text-[10px] font-mono font-bold uppercase text-[#00f0ff]">
-                    {char.universe}
+                    {/* Universe Badge */}
+                    <div className="absolute top-3 left-3 bg-black/80 border border-white/20 px-2 py-0.5 text-[10px] font-mono font-bold uppercase text-[#00f0ff]">
+                      {char.universe}
+                    </div>
+
+                    {/* Character Theme Glow */}
+                    <div
+                      className="absolute -bottom-6 -right-6 h-24 w-24 rounded-full blur-2xl opacity-40 group-hover:opacity-75 transition-opacity"
+                      style={{ backgroundColor: char.themeColor }}
+                    />
                   </div>
 
-                  {/* Character Theme Glow */}
-                  <div
-                    className="absolute -bottom-6 -right-6 h-24 w-24 rounded-full blur-2xl opacity-40 group-hover:opacity-75 transition-opacity"
-                    style={{ backgroundColor: char.themeColor }}
-                  />
-                </div>
+                  {/* Character Info */}
+                  <div className="p-4">
+                    <div className="font-mono text-xs font-bold text-amber-600 dark:text-[#ffe600] uppercase tracking-wider">
+                      {char.alias}
+                    </div>
+                    <h3 className="text-xl font-extrabold text-slate-900 dark:text-white mt-1 group-hover:text-[#ff0055] dark:group-hover:text-[#00f0ff] transition-colors">
+                      {char.name}
+                    </h3>
+                    <p className="mt-2 text-xs text-slate-600 dark:text-slate-400 line-clamp-2">
+                      {char.bio}
+                    </p>
 
-                {/* Character Info */}
-                <div className="p-4">
-                  <div className="font-mono text-xs font-bold text-[#ffe600] uppercase tracking-wider">
-                    {char.alias}
+                    <div className="mt-4 flex items-center justify-between border-t border-black/10 dark:border-white/10 pt-3">
+                      <span className="font-mono text-[11px] text-slate-500 dark:text-slate-400">
+                        Top Power:
+                      </span>
+                      <span className="font-mono text-[11px] font-semibold text-slate-900 dark:text-white">
+                        {char.powers[0].split(" ")[0]}
+                      </span>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-extrabold text-white mt-1 group-hover:text-[#00f0ff] transition-colors">
-                    {char.name}
-                  </h3>
-                  <p className="mt-2 text-xs text-slate-400 line-clamp-2">
-                    {char.bio}
-                  </p>
-
-                  <div className="mt-4 flex items-center justify-between border-t border-white/10 pt-3">
-                    <span className="font-mono text-[11px] text-slate-400">
-                      Top Power:
-                    </span>
-                    <span className="font-mono text-[11px] font-semibold text-white">
-                      {char.powers[0].split(" ")[0]}
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            </motion.div>
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -279,7 +279,7 @@ export default function Home() {
       {/* FEATURES SECTION (Scroll Triggered) */}
       <section
         id="features"
-        className="relative py-24 px-4 sm:px-6 lg:px-8 border-t border-white/10"
+        className="relative py-24 px-4 sm:px-6 lg:px-8 border-t border-black/10 dark:border-white/10"
       >
         <div className="max-w-7xl mx-auto">
           {/* Section Heading */}
@@ -290,14 +290,14 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto mb-16"
           >
-            <div className="inline-flex items-center gap-1.5 font-mono text-xs font-bold uppercase tracking-widest text-[#ffe600] bg-[#ffe600]/10 border border-[#ffe600]/30 px-3 py-1 rounded-full mb-3">
-              <Sparkles className="h-3.5 w-3.5 text-[#ffe600]" />
+            <div className="inline-flex items-center gap-1.5 font-mono text-xs font-bold uppercase tracking-widest text-amber-700 dark:text-[#ffe600] bg-amber-500/10 dark:bg-[#ffe600]/10 border border-amber-500/30 dark:border-[#ffe600]/30 px-3 py-1 rounded-full mb-3">
+              <Sparkles className="h-3.5 w-3.5 text-amber-500 dark:text-[#ffe600]" />
               <span>MULTIVERSE CAPABILITIES</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-black uppercase text-white tracking-tight">
-              BUILT FOR <span className="text-[#00f0ff]">DIMENSION-HOPPERS</span>
+            <h2 className="text-3xl sm:text-5xl font-black uppercase text-slate-900 dark:text-white tracking-tight">
+              BUILT FOR <span className="text-[#ff0055] dark:text-[#00f0ff]">DIMENSION-HOPPERS</span>
             </h2>
-            <p className="mt-4 text-slate-300 text-sm sm:text-base">
+            <p className="mt-4 text-slate-700 dark:text-slate-300 text-sm sm:text-base">
               Harness advanced Spider-Society technology to inspect timelines, filter arachnid capabilities, and experience multi-dimensional rendering.
             </p>
           </motion.div>
@@ -316,7 +316,7 @@ export default function Home() {
                 icon: Globe,
                 title: "Interactive Web Canvas",
                 desc: "Real-time HTML5 2D glowing web strands with mouse pointer tension and an accessible reduced-motion fallback grid.",
-                color: "#00f0ff",
+                color: "#00b4d8",
                 badge: "CANVAS 2D",
               },
               {
@@ -335,7 +335,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.5, delay: index * 0.15 }}
-                  className="relative p-6 border-2 border-white/10 bg-[#090b14]/90 halftone-bg comic-border"
+                  className="relative p-6 border-2 border-slate-900/15 dark:border-white/10 bg-white/95 dark:bg-[#090b14]/90 halftone-bg comic-border"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div
@@ -344,15 +344,15 @@ export default function Home() {
                     >
                       <Icon className="h-6 w-6 text-black" />
                     </div>
-                    <span className="font-mono text-[10px] font-black uppercase px-2 py-0.5 bg-white/10 text-slate-300 border border-white/20">
+                    <span className="font-mono text-[10px] font-black uppercase px-2 py-0.5 bg-black/5 dark:bg-white/10 text-slate-700 dark:text-slate-300 border border-black/10 dark:border-white/20">
                       {feat.badge}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-extrabold uppercase text-white">
+                  <h3 className="text-xl font-extrabold uppercase text-slate-900 dark:text-white">
                     {feat.title}
                   </h3>
-                  <p className="mt-2 text-sm text-slate-400 leading-relaxed">
+                  <p className="mt-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                     {feat.desc}
                   </p>
                 </motion.div>
@@ -363,22 +363,22 @@ export default function Home() {
       </section>
 
       {/* LEAP OF FAITH QUOTE SECTION */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-white/10 bg-gradient-to-b from-transparent to-[#0a0c16]">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-black/10 dark:border-white/10 bg-gradient-to-b from-transparent to-slate-200/50 dark:to-[#0a0c16]">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, scale: shouldReduceMotion ? 1 : 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.6 }}
-            className="relative p-8 sm:p-12 border-2 border-[#00f0ff] bg-black/70 shadow-[6px_6px_0px_#ff0055]"
+            className="relative p-8 sm:p-12 border-2 border-slate-900 dark:border-[#00f0ff] bg-white/95 dark:bg-black/70 shadow-[6px_6px_0px_#ff0055]"
           >
-            <div className="font-mono text-xs font-bold uppercase tracking-widest text-[#ffe600] mb-4">
+            <div className="font-mono text-xs font-bold uppercase tracking-widest text-[#ff0055] dark:text-[#ffe600] mb-4">
               {"// CANON EVENT INSIGHT"}
             </div>
-            <blockquote className="text-2xl sm:text-4xl font-black uppercase tracking-tight text-white leading-snug">
+            <blockquote className="text-2xl sm:text-4xl font-black uppercase tracking-tight text-slate-900 dark:text-white leading-snug">
               &ldquo;How will I know when I&apos;m ready? You won&apos;t. It&apos;s all it is, Miles. A leap of faith.&rdquo;
             </blockquote>
-            <div className="mt-6 font-mono text-sm font-bold text-[#00f0ff]">
+            <div className="mt-6 font-mono text-sm font-bold text-[#ff0055] dark:text-[#00f0ff]">
               &mdash; PETER B. PARKER (EARTH-616)
             </div>
 

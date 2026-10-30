@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 :root {
+  --background: #f6f7fb;
+  --foreground: #090a0f;
+}
+
+.dark {
   --background: #06070c;
   --foreground: #f0f4f8;
 }
@@ -12,8 +17,6 @@ body {
   background: var(--background);
   min-height: 100vh;
   overflow-x: hidden;
-  selection-background-color: #ff0055;
-  selection-color: #ffffff;
 }
 
 ::selection {
@@ -23,20 +26,29 @@ body {
 
 /* Comic Halftone Pattern */
 .halftone-bg {
-  background-image: radial-gradient(rgba(0, 240, 255, 0.12) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(0, 180, 216, 0.14) 1.2px, transparent 1.2px);
   background-size: 16px 16px;
 }
 
+.dark .halftone-bg {
+  background-image: radial-gradient(rgba(0, 240, 255, 0.12) 1px, transparent 1px);
+}
+
 .halftone-magenta {
-  background-image: radial-gradient(rgba(255, 0, 85, 0.12) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(255, 0, 85, 0.14) 1.5px, transparent 1.5px);
   background-size: 18px 18px;
 }
 
 /* Subtle Comic Border Effect */
 .comic-border {
+  border: 2px solid rgba(0, 0, 0, 0.14);
+  box-shadow: 4px 4px 0px rgba(0, 180, 216, 0.35);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark .comic-border {
   border: 2px solid rgba(255, 255, 255, 0.12);
   box-shadow: 4px 4px 0px rgba(0, 240, 255, 0.35);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .comic-border:hover {

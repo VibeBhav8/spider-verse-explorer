@@ -86,9 +86,13 @@ export default function GlitchCanvas() {
     const drawStaticGrid = () => {
       ctx.clearRect(0, 0, width, height);
 
+      const isDark = document.documentElement.classList.contains("dark");
+
       // Subtle comic halftone dot grid
       const dotSpacing = 36;
-      ctx.fillStyle = "rgba(0, 240, 255, 0.08)";
+      ctx.fillStyle = isDark
+        ? "rgba(0, 240, 255, 0.08)"
+        : "rgba(0, 150, 214, 0.12)";
       for (let x = 18; x < width; x += dotSpacing) {
         for (let y = 18; y < height; y += dotSpacing) {
           ctx.beginPath();
@@ -98,7 +102,9 @@ export default function GlitchCanvas() {
       }
 
       // Static dimensional web constellation
-      ctx.strokeStyle = "rgba(0, 240, 255, 0.12)";
+      ctx.strokeStyle = isDark
+        ? "rgba(0, 240, 255, 0.12)"
+        : "rgba(0, 150, 214, 0.18)";
       ctx.lineWidth = 1;
 
       for (let i = 0; i < nodes.length; i++) {
@@ -220,10 +226,15 @@ export default function GlitchCanvas() {
             ctx.lineTo(nodeB.x + (isGlitchFrame ? -glitchOffset : 0), nodeB.y);
 
             // Alternate neon colors for strands
+            const isDark = document.documentElement.classList.contains("dark");
             ctx.strokeStyle =
               i % 2 === 0
-                ? `rgba(0, 240, 255, ${alpha})`
-                : `rgba(255, 0, 85, ${alpha * 0.9})`;
+                ? isDark
+                  ? `rgba(0, 240, 255, ${alpha})`
+                  : `rgba(0, 160, 220, ${alpha * 1.1})`
+                : isDark
+                  ? `rgba(255, 0, 85, ${alpha * 0.9})`
+                  : `rgba(220, 0, 80, ${alpha * 1.1})`;
             ctx.lineWidth = alpha * 1.5;
             ctx.stroke();
           }
@@ -237,10 +248,13 @@ export default function GlitchCanvas() {
 
           if (mDist < mouseRadius) {
             const mAlpha = (1 - mDist / mouseRadius) * 0.6;
+            const isDark = document.documentElement.classList.contains("dark");
             ctx.beginPath();
             ctx.moveTo(node.x, node.y);
             ctx.lineTo(mouse.x, mouse.y);
-            ctx.strokeStyle = `rgba(0, 240, 255, ${mAlpha})`;
+            ctx.strokeStyle = isDark
+              ? `rgba(0, 240, 255, ${mAlpha})`
+              : `rgba(0, 160, 220, ${mAlpha * 1.2})`;
             ctx.lineWidth = mAlpha * 2;
             ctx.stroke();
           }
@@ -264,7 +278,7 @@ export default function GlitchCanvas() {
     <canvas
       ref={canvasRef}
       aria-hidden="true"
-      className="pointer-events-none fixed inset-0 -z-10 h-full w-full bg-[#06070c]"
+      className="pointer-events-none fixed inset-0 -z-10 h-full w-full bg-[#f6f7fb] dark:bg-[#06070c] transition-colors duration-300"
       style={{
         opacity: 0.85,
       }}

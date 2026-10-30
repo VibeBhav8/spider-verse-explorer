@@ -118,20 +118,20 @@ function CharacterGallery() {
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       {/* Header Banner */}
       <div className="mb-10 text-center sm:text-left">
-        <div className="inline-flex items-center gap-2 border-2 border-black bg-[#00f0ff] px-3 py-1 font-mono text-xs font-black uppercase text-black shadow-[3px_3px_0px_#ff0055] -rotate-1 mb-3">
+        <div className="inline-flex items-center gap-2 border-2 border-black bg-[#ffe600] px-3 py-1 font-mono text-xs font-black uppercase text-black shadow-[3px_3px_0px_#ff0055] -rotate-1 mb-3">
           <ShieldAlert className="h-4 w-4" />
           <span>DIMENSIONAL ARCHIVE // 8 ACTIVE ANOMALIES</span>
         </div>
-        <h1 className="text-4xl sm:text-6xl font-black uppercase tracking-tight text-white">
+        <h1 className="text-4xl sm:text-6xl font-black uppercase tracking-tight text-slate-900 dark:text-white">
           SPIDER-PEOPLE <span className="text-[#ff0055]">DATABASE</span>
         </h1>
-        <p className="mt-2 max-w-2xl text-sm sm:text-base text-slate-400">
+        <p className="mt-2 max-w-2xl text-sm sm:text-base text-slate-600 dark:text-slate-400">
           Biometric scans, origin realities, and arachnid capabilities classified by the Spider-Society. Filter by dimension or sort by alphabetical order.
         </p>
       </div>
 
       {/* Control Bar: Search + Universe Filter + Sort */}
-      <div className="mb-8 flex flex-col gap-4 rounded-none border-2 border-white/10 bg-[#090b14]/90 p-4 halftone-bg backdrop-blur-md sm:flex-row sm:items-center sm:justify-between">
+      <div className="mb-8 flex flex-col gap-4 rounded-none border-2 border-slate-900/15 bg-white/95 p-4 halftone-bg shadow-sm backdrop-blur-md dark:border-white/10 dark:bg-[#090b14]/90 sm:flex-row sm:items-center sm:justify-between">
         {/* Search Bar */}
         <div className="relative flex-1 max-w-md">
           <Search className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
@@ -140,12 +140,12 @@ function CharacterGallery() {
             placeholder="Search name, alias, powers, or earth..."
             value={currentQuery}
             onChange={(e) => updateParams({ search: e.target.value })}
-            className="w-full border-2 border-white/20 bg-black/60 py-2 pl-10 pr-4 font-mono text-sm text-white placeholder-slate-500 transition-colors focus:border-[#00f0ff] focus:outline-none focus:shadow-[3px_3px_0px_#00f0ff]"
+            className="w-full border-2 border-slate-900/20 bg-slate-50 py-2 pl-10 pr-4 font-mono text-sm text-slate-900 placeholder-slate-400 transition-colors focus:border-[#ff0055] focus:outline-none focus:shadow-[3px_3px_0px_#ff0055] dark:border-white/20 dark:bg-black/60 dark:text-white dark:placeholder-slate-500 dark:focus:border-[#00f0ff] dark:focus:shadow-[3px_3px_0px_#00f0ff]"
           />
           {currentQuery && (
             <button
               onClick={() => updateParams({ search: "" })}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-mono text-slate-400 hover:text-white"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-mono text-slate-500 hover:text-black dark:text-slate-400 dark:hover:text-white"
             >
               CLEAR
             </button>
@@ -156,12 +156,12 @@ function CharacterGallery() {
         <div className="flex flex-wrap items-center gap-3">
           {/* Universe Filter Dropdown */}
           <div className="flex items-center gap-2">
-            <Filter className="h-4 w-4 text-[#00f0ff]" />
+            <Filter className="h-4 w-4 text-[#ff0055] dark:text-[#00f0ff]" />
             <select
               aria-label="Filter by Universe"
               value={currentUniverse}
               onChange={(e) => updateParams({ universe: e.target.value })}
-              className="border-2 border-white/20 bg-[#090b14] px-3 py-2 font-mono text-xs sm:text-sm font-bold text-white transition-colors focus:border-[#00f0ff] focus:outline-none"
+              className="border-2 border-slate-900/20 bg-white px-3 py-2 font-mono text-xs sm:text-sm font-bold text-slate-900 transition-colors focus:border-[#ff0055] focus:outline-none dark:border-white/20 dark:bg-[#090b14] dark:text-white dark:focus:border-[#00f0ff]"
             >
               <option value="all">All Universes ({characters.length})</option>
               {allUniverses.map((uni) => (
@@ -179,7 +179,7 @@ function CharacterGallery() {
               aria-label="Sort Characters"
               value={currentSort}
               onChange={(e) => updateParams({ sort: e.target.value })}
-              className="border-2 border-white/20 bg-[#090b14] px-3 py-2 font-mono text-xs sm:text-sm font-bold text-white transition-colors focus:border-[#ff0055] focus:outline-none"
+              className="border-2 border-slate-900/20 bg-white px-3 py-2 font-mono text-xs sm:text-sm font-bold text-slate-900 transition-colors focus:border-[#ff0055] focus:outline-none dark:border-white/20 dark:bg-[#090b14] dark:text-white"
             >
               <option value="name-asc">Alphabetical (A &rarr; Z)</option>
               <option value="name-desc">Alphabetical (Z &rarr; A)</option>
@@ -197,7 +197,7 @@ function CharacterGallery() {
             <button
               onClick={handleResetFilters}
               title="Reset all filters"
-              className="inline-flex items-center gap-1 border border-white/20 bg-white/5 px-2.5 py-2 font-mono text-xs font-bold text-slate-300 hover:border-[#ffe600] hover:text-[#ffe600] transition-colors"
+              className="inline-flex items-center gap-1 border border-black/15 bg-black/5 px-2.5 py-2 font-mono text-xs font-bold text-slate-700 hover:border-[#ff0055] hover:text-[#ff0055] transition-colors dark:border-white/20 dark:bg-white/5 dark:text-slate-300 dark:hover:border-[#ffe600] dark:hover:text-[#ffe600]"
             >
               <RotateCcw className="h-3.5 w-3.5" />
               <span className="hidden sm:inline">Reset</span>
@@ -208,16 +208,16 @@ function CharacterGallery() {
 
       {/* Universe Quick Filter Pills */}
       <div className="mb-8 flex flex-wrap gap-2 items-center">
-        <span className="font-mono text-xs text-slate-400 mr-2 flex items-center gap-1">
-          <Users className="h-3.5 w-3.5 text-[#ffe600]" />
+        <span className="font-mono text-xs text-slate-500 dark:text-slate-400 mr-2 flex items-center gap-1">
+          <Users className="h-3.5 w-3.5 text-amber-500 dark:text-[#ffe600]" />
           <span>Realities:</span>
         </span>
         <button
           onClick={() => updateParams({ universe: "all" })}
           className={`border px-3 py-1 font-mono text-xs font-bold transition-all ${
             currentUniverse === "all"
-              ? "border-[#00f0ff] bg-[#00f0ff] text-black shadow-[2px_2px_0px_#ff0055]"
-              : "border-white/10 bg-black/40 text-slate-300 hover:border-white/30"
+              ? "border-[#ff0055] bg-[#ff0055] text-white shadow-[2px_2px_0px_#00b4d8] dark:border-[#00f0ff] dark:bg-[#00f0ff] dark:text-black dark:shadow-[2px_2px_0px_#ff0055]"
+              : "border-slate-300 bg-white text-slate-700 hover:border-slate-400 dark:border-white/10 dark:bg-black/40 dark:text-slate-300 dark:hover:border-white/30"
           }`}
         >
           All ({characters.length})
@@ -230,8 +230,8 @@ function CharacterGallery() {
               onClick={() => updateParams({ universe: uni })}
               className={`border px-3 py-1 font-mono text-xs font-bold transition-all ${
                 isSelected
-                  ? "border-[#ff0055] bg-[#ff0055] text-white shadow-[2px_2px_0px_#00f0ff]"
-                  : "border-white/10 bg-black/40 text-slate-300 hover:border-white/30"
+                  ? "border-[#ff0055] bg-[#ff0055] text-white shadow-[2px_2px_0px_#00b4d8] dark:shadow-[2px_2px_0px_#00f0ff]"
+                  : "border-slate-300 bg-white text-slate-700 hover:border-slate-400 dark:border-white/10 dark:bg-black/40 dark:text-slate-300 dark:hover:border-white/30"
               }`}
             >
               {uni}
@@ -241,10 +241,10 @@ function CharacterGallery() {
       </div>
 
       {/* Characters Count & Status Line */}
-      <div className="mb-6 flex items-center justify-between border-b border-white/10 pb-3 font-mono text-xs text-slate-400">
+      <div className="mb-6 flex items-center justify-between border-b border-black/10 pb-3 font-mono text-xs text-slate-500 dark:border-white/10 dark:text-slate-400">
         <div>
           Showing{" "}
-          <span className="font-bold text-[#00f0ff]">
+          <span className="font-bold text-[#ff0055] dark:text-[#00f0ff]">
             {filteredCharacters.length}
           </span>{" "}
           of {characters.length} Spider-People
@@ -272,12 +272,12 @@ function CharacterGallery() {
         </motion.div>
       ) : (
         /* Empty State */
-        <div className="my-16 flex flex-col items-center justify-center border-2 border-dashed border-white/20 p-12 text-center halftone-bg">
+        <div className="my-16 flex flex-col items-center justify-center border-2 border-dashed border-slate-300 p-12 text-center halftone-bg dark:border-white/20">
           <ShieldAlert className="h-12 w-12 text-[#ff0055] mb-4" />
-          <h3 className="text-2xl font-black uppercase text-white">
+          <h3 className="text-2xl font-black uppercase text-slate-900 dark:text-white">
             NO ANOMALIES FOUND IN THIS TIMELINE
           </h3>
-          <p className="mt-2 max-w-md text-sm text-slate-400">
+          <p className="mt-2 max-w-md text-sm text-slate-600 dark:text-slate-400">
             No Spider-People match your current search criteria ({currentUniverse !== "all" ? `Universe: ${currentUniverse}, ` : ""}{currentQuery ? `Query: "${currentQuery}"` : ""}).
           </p>
           <button
@@ -296,12 +296,12 @@ function CharacterGallery() {
 function CharacterGallerySkeleton() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-      <div className="h-12 w-64 bg-white/10 animate-pulse mb-8" />
+      <div className="h-12 w-64 bg-slate-200 dark:bg-white/10 animate-pulse mb-8" />
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {Array.from({ length: 8 }).map((_, i) => (
           <div
             key={i}
-            className="h-96 border-2 border-white/10 bg-[#0c0d16] animate-pulse"
+            className="h-96 border-2 border-slate-200 bg-white dark:border-white/10 dark:bg-[#0c0d16] animate-pulse"
           />
         ))}
       </div>
